@@ -21,7 +21,20 @@ To use ePalette, import the module and call the emotionToPalette function, passi
 import { emotionToPalette } from 'epalette';
 
 const palette = emotionToPalette('happy');
-console.log(palette);  // Example Output: ['#FFD700', '#FFA500', '#FF6347']
-'''
+console.log(palette); // Example Output: ['#FFD700', '#FFA500', '#FF6347']
 
+'''
+## Generate Palette by Analyzing Text
+Use the 'analyzeTextAndGetPalette' function to analyze text sentiment and generate a corresponding color palette. The module uses the MeaningCloud API for sentiment analysis.
+
+'''
+import { analyzeTextAndGetPalette } from 'epalette';
+
+(async () => {
+  const text = "It's a calm and peaceful evening.";
+  const palette = await analyzeTextAndGetPalette(text);
+  console.log(palette); // Example Output: ['#1E90FF', '#00CED1', '#4682B4']
+})();
+
+'''
 
